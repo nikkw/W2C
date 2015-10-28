@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservice.w2.process.com.br/" targetNamespace="http://webservice.w2.process.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getAbcDoc" type="tns:getAbcDoc" />
+  <xs:element name="getAbcDocResponse" type="tns:getAbcDocResponse" />
+  <xs:element name="getAccount" type="tns:getAccount" />
+  <xs:element name="getAccountResponse" type="tns:getAccountResponse" />
+  <xs:element name="getAreas" type="tns:getAreas" />
+  <xs:element name="getAreasResponse" type="tns:getAreasResponse" />
+  <xs:element name="getDocumento" type="tns:getDocumento" />
+  <xs:element name="getDocumentoResponse" type="tns:getDocumentoResponse" />
+  <xs:element name="getDocumentosLixeiraGeral" type="tns:getDocumentosLixeiraGeral" />
+  <xs:element name="getDocumentosLixeiraGeralResponse" type="tns:getDocumentosLixeiraGeralResponse" />
+  <xs:element name="getDocumentosLixeiraInicio" type="tns:getDocumentosLixeiraInicio" />
+  <xs:element name="getDocumentosLixeiraInicioResponse" type="tns:getDocumentosLixeiraInicioResponse" />
+  <xs:element name="getDocumentosLixeiraSub" type="tns:getDocumentosLixeiraSub" />
+  <xs:element name="getDocumentosLixeiraSubResponse" type="tns:getDocumentosLixeiraSubResponse" />
+  <xs:element name="getGrupos" type="tns:getGrupos" />
+  <xs:element name="getGruposLixeira" type="tns:getGruposLixeira" />
+  <xs:element name="getGruposLixeiraResponse" type="tns:getGruposLixeiraResponse" />
+  <xs:element name="getGruposResponse" type="tns:getGruposResponse" />
+  <xs:element name="getListaBusca" type="tns:getListaBusca" />
+  <xs:element name="getListaBuscaResponse" type="tns:getListaBuscaResponse" />
+  <xs:element name="getListaDocumentos" type="tns:getListaDocumentos" />
+  <xs:element name="getListaDocumentosResponse" type="tns:getListaDocumentosResponse" />
+  <xs:element name="getListaRecentes" type="tns:getListaRecentes" />
+  <xs:element name="getListaRecentesResponse" type="tns:getListaRecentesResponse" />
+  <xs:element name="getSendEmail" type="tns:getSendEmail" />
+  <xs:element name="getSendEmailResponse" type="tns:getSendEmailResponse" />
+  <xs:element name="getSubGrupos" type="tns:getSubGrupos" />
+  <xs:element name="getSubGruposLixeira" type="tns:getSubGruposLixeira" />
+  <xs:element name="getSubGruposLixeiraInicio" type="tns:getSubGruposLixeiraInicio" />
+  <xs:element name="getSubGruposLixeiraInicioResponse" type="tns:getSubGruposLixeiraInicioResponse" />
+  <xs:element name="getSubGruposLixeiraResponse" type="tns:getSubGruposLixeiraResponse" />
+  <xs:element name="getSubGruposResponse" type="tns:getSubGruposResponse" />
+  <xs:element name="newDocumento" type="tns:newDocumento" />
+  <xs:element name="newDocumentoResponse" type="tns:newDocumentoResponse" />
+  <xs:element name="newGrupo" type="tns:newGrupo" />
+  <xs:element name="newGrupoResponse" type="tns:newGrupoResponse" />
+  <xs:element name="newSubGrupo" type="tns:newSubGrupo" />
+  <xs:element name="newSubGrupoResponse" type="tns:newSubGrupoResponse" />
+  <xs:element name="setAccount" type="tns:setAccount" />
+  <xs:element name="setAccountResponse" type="tns:setAccountResponse" />
+  <xs:element name="setDirDownload" type="tns:setDirDownload" />
+  <xs:element name="setDirDownloadResponse" type="tns:setDirDownloadResponse" />
+  <xs:element name="setEmail" type="tns:setEmail" />
+  <xs:element name="setEmailResponse" type="tns:setEmailResponse" />
+  <xs:element name="setExcluirDocumento" type="tns:setExcluirDocumento" />
+  <xs:element name="setExcluirDocumentoResponse" type="tns:setExcluirDocumentoResponse" />
+  <xs:element name="setExcluirGrupo" type="tns:setExcluirGrupo" />
+  <xs:element name="setExcluirGrupoDefinitivo" type="tns:setExcluirGrupoDefinitivo" />
+  <xs:element name="setExcluirGrupoDefinitivoResponse" type="tns:setExcluirGrupoDefinitivoResponse" />
+  <xs:element name="setExcluirGrupoResponse" type="tns:setExcluirGrupoResponse" />
+  <xs:element name="setExcluirSub" type="tns:setExcluirSub" />
+  <xs:element name="setExcluirSubDefinitivo" type="tns:setExcluirSubDefinitivo" />
+  <xs:element name="setExcluirSubDefinitivoResponse" type="tns:setExcluirSubDefinitivoResponse" />
+  <xs:element name="setExcluirSubResponse" type="tns:setExcluirSubResponse" />
+  <xs:element name="setExclusaoDefinitivaDocumento" type="tns:setExclusaoDefinitivaDocumento" />
+  <xs:element name="setExclusaoDefinitivaDocumentoResponse" type="tns:setExclusaoDefinitivaDocumentoResponse" />
+  <xs:element name="setGrupo" type="tns:setGrupo" />
+  <xs:element name="setGrupoResponse" type="tns:setGrupoResponse" />
+  <xs:element name="setOpenDocument" type="tns:setOpenDocument" />
+  <xs:element name="setOpenDocumentResponse" type="tns:setOpenDocumentResponse" />
+  <xs:element name="setPassword" type="tns:setPassword" />
+  <xs:element name="setPasswordResponse" type="tns:setPasswordResponse" />
+  <xs:element name="setRenomearDocumento" type="tns:setRenomearDocumento" />
+  <xs:element name="setRenomearDocumentoResponse" type="tns:setRenomearDocumentoResponse" />
+  <xs:element name="setRestaurarDocumento" type="tns:setRestaurarDocumento" />
+  <xs:element name="setRestaurarDocumentoResponse" type="tns:setRestaurarDocumentoResponse" />
+  <xs:element name="setRestaurarGrupo" type="tns:setRestaurarGrupo" />
+  <xs:element name="setRestaurarGrupoResponse" type="tns:setRestaurarGrupoResponse" />
+  <xs:element name="setRestaurarSub" type="tns:setRestaurarSub" />
+  <xs:element name="setRestaurarSubResponse" type="tns:setRestaurarSubResponse" />
+  <xs:element name="setSub" type="tns:setSub" />
+  <xs:element name="setSubResponse" type="tns:setSubResponse" />
+  <xs:complexType name="setOpenDocument">
+    <xs:sequence>
+      <xs:element name="openDocument" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setOpenDocumentResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirGrupoDefinitivo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirGrupoDefinitivoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarGrupo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGruposLixeira">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:long" />
+      <xs:element name="idPai" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGruposLixeiraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subGroup">
+    <xs:sequence>
+      <xs:element name="ativo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="criacao" type="xs:string" />
+      <xs:element minOccurs="0" name="delete" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="idGroup" type="xs:long" />
+      <xs:element name="idPai" type="xs:long" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="update" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraSub">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:long" />
+      <xs:element name="idSub" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraSubResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="documento">
+    <xs:sequence>
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="areaid" type="xs:int" />
+      <xs:element minOccurs="0" name="areaname" type="xs:string" />
+      <xs:element minOccurs="0" name="criacao" type="xs:string" />
+      <xs:element minOccurs="0" name="delete" type="xs:string" />
+      <xs:element minOccurs="0" name="format" type="xs:string" />
+      <xs:element minOccurs="0" name="groupname" type="xs:string" />
+      <xs:element name="grupoid" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="idacc" type="xs:int" />
+      <xs:element minOccurs="0" name="identifier" type="xs:string" />
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+      <xs:element minOccurs="0" name="observacao" type="xs:string" />
+      <xs:element name="pages" type="xs:int" />
+      <xs:element name="subid" type="xs:long" />
+      <xs:element minOccurs="0" name="subname" type="xs:string" />
+      <xs:element minOccurs="0" name="update" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAbcDoc">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAbcDocResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bancoAbcDoc" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bancoAbcDoc">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="application" type="xs:string" />
+      <xs:element minOccurs="0" name="ip" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="port" type="xs:int" />
+      <xs:element minOccurs="0" name="userr" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getGrupos">
+    <xs:sequence>
+      <xs:element name="idArea" type="xs:int" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getGruposResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="group">
+    <xs:sequence>
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="ativo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="criacao" type="xs:string" />
+      <xs:element minOccurs="0" name="delete" type="xs:string" />
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="idAcc" type="xs:int" />
+      <xs:element name="idArea" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="update" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarDocumento">
+    <xs:sequence>
+      <xs:element name="docId" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGruposLixeiraInicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGruposLixeiraInicioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGrupos">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:long" />
+      <xs:element name="idPai" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubGruposResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPassword">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPasswordResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarSub">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element name="restaurarDoc" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRestaurarSubResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExclusaoDefinitivaDocumento">
+    <xs:sequence>
+      <xs:element name="docId" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExclusaoDefinitivaDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDirDownload">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dirDownload" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setDirDownloadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newSubGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subGrupo" type="tns:subGroup" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newSubGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraGeral">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraGeralResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setSub">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sub" type="tns:subGroup" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setSubResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaBusca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="busca" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaBuscaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAreas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAreasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:area" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="area">
+    <xs:sequence>
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element name="edit" type="xs:boolean" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="senha" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:accounts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="accounts">
+    <xs:sequence>
+      <xs:element name="active" type="xs:boolean" />
+      <xs:element minOccurs="0" name="cpf" type="xs:string" />
+      <xs:element minOccurs="0" name="createDate" type="tns:timestamp" />
+      <xs:element minOccurs="0" name="deleteData" type="tns:timestamp" />
+      <xs:element minOccurs="0" name="dirDownload" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="fullName" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="openDocument" type="xs:boolean" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timestamp">
+    <xs:sequence>
+      <xs:element name="nanos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grupo" type="tns:group" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraInicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentosLixeiraInicioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaRecentes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaRecentesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirGrupo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirGrupoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getGruposLixeira">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getGruposLixeiraResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setEmailResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRenomearDocumento">
+    <xs:sequence>
+      <xs:element name="docId" type="xs:long" />
+      <xs:element minOccurs="0" name="nome" type="xs:string" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setRenomearDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documento" type="tns:documento" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumento">
+    <xs:sequence>
+      <xs:element name="docId" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getDocumentoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acc" type="tns:accounts" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAccountResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSendEmail">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getSendEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:sendEmail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendEmail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="host" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="port" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirDocumento">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirDocumentoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaDocumentos">
+    <xs:sequence>
+      <xs:element name="idGrupo" type="xs:long" />
+      <xs:element name="idSub" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getListaDocumentosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:documento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirSubDefinitivo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirSubDefinitivoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="grupo" type="tns:group" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="newGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:group" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirSub">
+    <xs:sequence>
+      <xs:element name="id" type="xs:long" />
+      <xs:element minOccurs="0" name="hash" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setExcluirSubResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

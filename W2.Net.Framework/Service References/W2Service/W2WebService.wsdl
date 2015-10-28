@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservice.w2.process.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="W2WebService" targetNamespace="http://webservice.w2.process.com.br/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://processinformatica.com.br:80/W2/W2WebService?xsd=1" namespace="http://webservice.w2.process.com.br/" />
+    </xsd:schema>
+  </types>
+  <message name="setEmail">
+    <part name="parameters" element="tns:setEmail" />
+  </message>
+  <message name="setEmailResponse">
+    <part name="parameters" element="tns:setEmailResponse" />
+  </message>
+  <message name="setPassword">
+    <part name="parameters" element="tns:setPassword" />
+  </message>
+  <message name="setPasswordResponse">
+    <part name="parameters" element="tns:setPasswordResponse" />
+  </message>
+  <message name="getGrupos">
+    <part name="parameters" element="tns:getGrupos" />
+  </message>
+  <message name="getGruposResponse">
+    <part name="parameters" element="tns:getGruposResponse" />
+  </message>
+  <message name="getAbcDoc">
+    <part name="parameters" element="tns:getAbcDoc" />
+  </message>
+  <message name="getAbcDocResponse">
+    <part name="parameters" element="tns:getAbcDocResponse" />
+  </message>
+  <message name="setGrupo">
+    <part name="parameters" element="tns:setGrupo" />
+  </message>
+  <message name="setGrupoResponse">
+    <part name="parameters" element="tns:setGrupoResponse" />
+  </message>
+  <message name="getGruposLixeira">
+    <part name="parameters" element="tns:getGruposLixeira" />
+  </message>
+  <message name="getGruposLixeiraResponse">
+    <part name="parameters" element="tns:getGruposLixeiraResponse" />
+  </message>
+  <message name="getSubGruposLixeira">
+    <part name="parameters" element="tns:getSubGruposLixeira" />
+  </message>
+  <message name="getSubGruposLixeiraResponse">
+    <part name="parameters" element="tns:getSubGruposLixeiraResponse" />
+  </message>
+  <message name="getSubGruposLixeiraInicio">
+    <part name="parameters" element="tns:getSubGruposLixeiraInicio" />
+  </message>
+  <message name="getSubGruposLixeiraInicioResponse">
+    <part name="parameters" element="tns:getSubGruposLixeiraInicioResponse" />
+  </message>
+  <message name="getDocumentosLixeiraSub">
+    <part name="parameters" element="tns:getDocumentosLixeiraSub" />
+  </message>
+  <message name="getDocumentosLixeiraSubResponse">
+    <part name="parameters" element="tns:getDocumentosLixeiraSubResponse" />
+  </message>
+  <message name="getListaRecentes">
+    <part name="parameters" element="tns:getListaRecentes" />
+  </message>
+  <message name="getListaRecentesResponse">
+    <part name="parameters" element="tns:getListaRecentesResponse" />
+  </message>
+  <message name="setAccount">
+    <part name="parameters" element="tns:setAccount" />
+  </message>
+  <message name="setAccountResponse">
+    <part name="parameters" element="tns:setAccountResponse" />
+  </message>
+  <message name="setDirDownload">
+    <part name="parameters" element="tns:setDirDownload" />
+  </message>
+  <message name="setDirDownloadResponse">
+    <part name="parameters" element="tns:setDirDownloadResponse" />
+  </message>
+  <message name="setOpenDocument">
+    <part name="parameters" element="tns:setOpenDocument" />
+  </message>
+  <message name="setOpenDocumentResponse">
+    <part name="parameters" element="tns:setOpenDocumentResponse" />
+  </message>
+  <message name="getAreas">
+    <part name="parameters" element="tns:getAreas" />
+  </message>
+  <message name="getAreasResponse">
+    <part name="parameters" element="tns:getAreasResponse" />
+  </message>
+  <message name="newDocumento">
+    <part name="parameters" element="tns:newDocumento" />
+  </message>
+  <message name="newDocumentoResponse">
+    <part name="parameters" element="tns:newDocumentoResponse" />
+  </message>
+  <message name="newGrupo">
+    <part name="parameters" element="tns:newGrupo" />
+  </message>
+  <message name="newGrupoResponse">
+    <part name="parameters" element="tns:newGrupoResponse" />
+  </message>
+  <message name="newSubGrupo">
+    <part name="parameters" element="tns:newSubGrupo" />
+  </message>
+  <message name="newSubGrupoResponse">
+    <part name="parameters" element="tns:newSubGrupoResponse" />
+  </message>
+  <message name="getAccount">
+    <part name="parameters" element="tns:getAccount" />
+  </message>
+  <message name="getAccountResponse">
+    <part name="parameters" element="tns:getAccountResponse" />
+  </message>
+  <message name="getDocumentosLixeiraInicio">
+    <part name="parameters" element="tns:getDocumentosLixeiraInicio" />
+  </message>
+  <message name="getDocumentosLixeiraInicioResponse">
+    <part name="parameters" element="tns:getDocumentosLixeiraInicioResponse" />
+  </message>
+  <message name="setSub">
+    <part name="parameters" element="tns:setSub" />
+  </message>
+  <message name="setSubResponse">
+    <part name="parameters" element="tns:setSubResponse" />
+  </message>
+  <message name="setRenomearDocumento">
+    <part name="parameters" element="tns:setRenomearDocumento" />
+  </message>
+  <message name="setRenomearDocumentoResponse">
+    <part name="parameters" element="tns:setRenomearDocumentoResponse" />
+  </message>
+  <message name="setExcluirDocumento">
+    <part name="parameters" element="tns:setExcluirDocumento" />
+  </message>
+  <message name="setExcluirDocumentoResponse">
+    <part name="parameters" element="tns:setExcluirDocumentoResponse" />
+  </message>
+  <message name="setExclusaoDefinitivaDocumento">
+    <part name="parameters" element="tns:setExclusaoDefinitivaDocumento" />
+  </message>
+  <message name="setExclusaoDefinitivaDocumentoResponse">
+    <part name="parameters" element="tns:setExclusaoDefinitivaDocumentoResponse" />
+  </message>
+  <message name="setRestaurarDocumento">
+    <part name="parameters" element="tns:setRestaurarDocumento" />
+  </message>
+  <message name="setRestaurarDocumentoResponse">
+    <part name="parameters" element="tns:setRestaurarDocumentoResponse" />
+  </message>
+  <message name="setRestaurarGrupo">
+    <part name="parameters" element="tns:setRestaurarGrupo" />
+  </message>
+  <message name="setRestaurarGrupoResponse">
+    <part name="parameters" element="tns:setRestaurarGrupoResponse" />
+  </message>
+  <message name="setRestaurarSub">
+    <part name="parameters" element="tns:setRestaurarSub" />
+  </message>
+  <message name="setRestaurarSubResponse">
+    <part name="parameters" element="tns:setRestaurarSubResponse" />
+  </message>
+  <message name="setExcluirSub">
+    <part name="parameters" element="tns:setExcluirSub" />
+  </message>
+  <message name="setExcluirSubResponse">
+    <part name="parameters" element="tns:setExcluirSubResponse" />
+  </message>
+  <message name="setExcluirSubDefinitivo">
+    <part name="parameters" element="tns:setExcluirSubDefinitivo" />
+  </message>
+  <message name="setExcluirSubDefinitivoResponse">
+    <part name="parameters" element="tns:setExcluirSubDefinitivoResponse" />
+  </message>
+  <message name="setExcluirGrupo">
+    <part name="parameters" element="tns:setExcluirGrupo" />
+  </message>
+  <message name="setExcluirGrupoResponse">
+    <part name="parameters" element="tns:setExcluirGrupoResponse" />
+  </message>
+  <message name="setExcluirGrupoDefinitivo">
+    <part name="parameters" element="tns:setExcluirGrupoDefinitivo" />
+  </message>
+  <message name="setExcluirGrupoDefinitivoResponse">
+    <part name="parameters" element="tns:setExcluirGrupoDefinitivoResponse" />
+  </message>
+  <message name="getDocumento">
+    <part name="parameters" element="tns:getDocumento" />
+  </message>
+  <message name="getDocumentoResponse">
+    <part name="parameters" element="tns:getDocumentoResponse" />
+  </message>
+  <message name="getListaDocumentos">
+    <part name="parameters" element="tns:getListaDocumentos" />
+  </message>
+  <message name="getListaDocumentosResponse">
+    <part name="parameters" element="tns:getListaDocumentosResponse" />
+  </message>
+  <message name="getListaBusca">
+    <part name="parameters" element="tns:getListaBusca" />
+  </message>
+  <message name="getListaBuscaResponse">
+    <part name="parameters" element="tns:getListaBuscaResponse" />
+  </message>
+  <message name="getSendEmail">
+    <part name="parameters" element="tns:getSendEmail" />
+  </message>
+  <message name="getSendEmailResponse">
+    <part name="parameters" element="tns:getSendEmailResponse" />
+  </message>
+  <message name="getDocumentosLixeiraGeral">
+    <part name="parameters" element="tns:getDocumentosLixeiraGeral" />
+  </message>
+  <message name="getDocumentosLixeiraGeralResponse">
+    <part name="parameters" element="tns:getDocumentosLixeiraGeralResponse" />
+  </message>
+  <message name="getSubGrupos">
+    <part name="parameters" element="tns:getSubGrupos" />
+  </message>
+  <message name="getSubGruposResponse">
+    <part name="parameters" element="tns:getSubGruposResponse" />
+  </message>
+  <portType name="W2WebServiceImpl">
+    <operation name="setEmail">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setEmailRequest" message="tns:setEmail" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setEmailResponse" message="tns:setEmailResponse" />
+    </operation>
+    <operation name="setPassword">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setPasswordRequest" message="tns:setPassword" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setPasswordResponse" message="tns:setPasswordResponse" />
+    </operation>
+    <operation name="getGrupos">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getGruposRequest" message="tns:getGrupos" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getGruposResponse" message="tns:getGruposResponse" />
+    </operation>
+    <operation name="getAbcDoc">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAbcDocRequest" message="tns:getAbcDoc" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAbcDocResponse" message="tns:getAbcDocResponse" />
+    </operation>
+    <operation name="setGrupo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setGrupoRequest" message="tns:setGrupo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setGrupoResponse" message="tns:setGrupoResponse" />
+    </operation>
+    <operation name="getGruposLixeira">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getGruposLixeiraRequest" message="tns:getGruposLixeira" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getGruposLixeiraResponse" message="tns:getGruposLixeiraResponse" />
+    </operation>
+    <operation name="getSubGruposLixeira">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposLixeiraRequest" message="tns:getSubGruposLixeira" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposLixeiraResponse" message="tns:getSubGruposLixeiraResponse" />
+    </operation>
+    <operation name="getSubGruposLixeiraInicio">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposLixeiraInicioRequest" message="tns:getSubGruposLixeiraInicio" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposLixeiraInicioResponse" message="tns:getSubGruposLixeiraInicioResponse" />
+    </operation>
+    <operation name="getDocumentosLixeiraSub">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraSubRequest" message="tns:getDocumentosLixeiraSub" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraSubResponse" message="tns:getDocumentosLixeiraSubResponse" />
+    </operation>
+    <operation name="getListaRecentes">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaRecentesRequest" message="tns:getListaRecentes" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaRecentesResponse" message="tns:getListaRecentesResponse" />
+    </operation>
+    <operation name="setAccount">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setAccountRequest" message="tns:setAccount" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setAccountResponse" message="tns:setAccountResponse" />
+    </operation>
+    <operation name="setDirDownload">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setDirDownloadRequest" message="tns:setDirDownload" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setDirDownloadResponse" message="tns:setDirDownloadResponse" />
+    </operation>
+    <operation name="setOpenDocument">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setOpenDocumentRequest" message="tns:setOpenDocument" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setOpenDocumentResponse" message="tns:setOpenDocumentResponse" />
+    </operation>
+    <operation name="getAreas">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAreasRequest" message="tns:getAreas" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAreasResponse" message="tns:getAreasResponse" />
+    </operation>
+    <operation name="newDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newDocumentoRequest" message="tns:newDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newDocumentoResponse" message="tns:newDocumentoResponse" />
+    </operation>
+    <operation name="newGrupo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newGrupoRequest" message="tns:newGrupo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newGrupoResponse" message="tns:newGrupoResponse" />
+    </operation>
+    <operation name="newSubGrupo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newSubGrupoRequest" message="tns:newSubGrupo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/newSubGrupoResponse" message="tns:newSubGrupoResponse" />
+    </operation>
+    <operation name="getAccount">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAccountRequest" message="tns:getAccount" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getAccountResponse" message="tns:getAccountResponse" />
+    </operation>
+    <operation name="getDocumentosLixeiraInicio">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraInicioRequest" message="tns:getDocumentosLixeiraInicio" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraInicioResponse" message="tns:getDocumentosLixeiraInicioResponse" />
+    </operation>
+    <operation name="setSub">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setSubRequest" message="tns:setSub" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setSubResponse" message="tns:setSubResponse" />
+    </operation>
+    <operation name="setRenomearDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRenomearDocumentoRequest" message="tns:setRenomearDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRenomearDocumentoResponse" message="tns:setRenomearDocumentoResponse" />
+    </operation>
+    <operation name="setExcluirDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirDocumentoRequest" message="tns:setExcluirDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirDocumentoResponse" message="tns:setExcluirDocumentoResponse" />
+    </operation>
+    <operation name="setExclusaoDefinitivaDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExclusaoDefinitivaDocumentoRequest" message="tns:setExclusaoDefinitivaDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExclusaoDefinitivaDocumentoResponse" message="tns:setExclusaoDefinitivaDocumentoResponse" />
+    </operation>
+    <operation name="setRestaurarDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarDocumentoRequest" message="tns:setRestaurarDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarDocumentoResponse" message="tns:setRestaurarDocumentoResponse" />
+    </operation>
+    <operation name="setRestaurarGrupo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarGrupoRequest" message="tns:setRestaurarGrupo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarGrupoResponse" message="tns:setRestaurarGrupoResponse" />
+    </operation>
+    <operation name="setRestaurarSub">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarSubRequest" message="tns:setRestaurarSub" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setRestaurarSubResponse" message="tns:setRestaurarSubResponse" />
+    </operation>
+    <operation name="setExcluirSub">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirSubRequest" message="tns:setExcluirSub" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirSubResponse" message="tns:setExcluirSubResponse" />
+    </operation>
+    <operation name="setExcluirSubDefinitivo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirSubDefinitivoRequest" message="tns:setExcluirSubDefinitivo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirSubDefinitivoResponse" message="tns:setExcluirSubDefinitivoResponse" />
+    </operation>
+    <operation name="setExcluirGrupo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirGrupoRequest" message="tns:setExcluirGrupo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirGrupoResponse" message="tns:setExcluirGrupoResponse" />
+    </operation>
+    <operation name="setExcluirGrupoDefinitivo">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirGrupoDefinitivoRequest" message="tns:setExcluirGrupoDefinitivo" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/setExcluirGrupoDefinitivoResponse" message="tns:setExcluirGrupoDefinitivoResponse" />
+    </operation>
+    <operation name="getDocumento">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentoRequest" message="tns:getDocumento" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentoResponse" message="tns:getDocumentoResponse" />
+    </operation>
+    <operation name="getListaDocumentos">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaDocumentosRequest" message="tns:getListaDocumentos" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaDocumentosResponse" message="tns:getListaDocumentosResponse" />
+    </operation>
+    <operation name="getListaBusca">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaBuscaRequest" message="tns:getListaBusca" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getListaBuscaResponse" message="tns:getListaBuscaResponse" />
+    </operation>
+    <operation name="getSendEmail">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSendEmailRequest" message="tns:getSendEmail" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSendEmailResponse" message="tns:getSendEmailResponse" />
+    </operation>
+    <operation name="getDocumentosLixeiraGeral">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraGeralRequest" message="tns:getDocumentosLixeiraGeral" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getDocumentosLixeiraGeralResponse" message="tns:getDocumentosLixeiraGeralResponse" />
+    </operation>
+    <operation name="getSubGrupos">
+      <input wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposRequest" message="tns:getSubGrupos" />
+      <output wsam:Action="http://webservice.w2.process.com.br/W2WebServiceImpl/getSubGruposResponse" message="tns:getSubGruposResponse" />
+    </operation>
+  </portType>
+  <binding name="W2WebServiceImplPortBinding" type="tns:W2WebServiceImpl">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="setEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGrupos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAbcDoc">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGruposLixeira">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSubGruposLixeira">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSubGruposLixeiraInicio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDocumentosLixeiraSub">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getListaRecentes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setDirDownload">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setOpenDocument">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAreas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="newDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="newGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="newSubGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAccount">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDocumentosLixeiraInicio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setSub">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRenomearDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExcluirDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExclusaoDefinitivaDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRestaurarDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRestaurarGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRestaurarSub">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExcluirSub">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExcluirSubDefinitivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExcluirGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setExcluirGrupoDefinitivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDocumento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getListaDocumentos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getListaBusca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSendEmail">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getDocumentosLixeiraGeral">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSubGrupos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="W2WebService">
+    <port name="W2WebServiceImplPort" binding="tns:W2WebServiceImplPortBinding">
+      <soap:address location="http://processinformatica.com.br:80/W2/W2WebService" />
+    </port>
+  </service>
+</definitions>
